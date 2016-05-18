@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bean:beans xmlns:bean="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+     http://www.springframework.org/schema/security
+     http://www.springframework.org/schema/security/spring-security-4.1.xsd">
+ 
+	<http auto-config="true" >
+		<intercept-url pattern="/protected/**" access="hasRole('ROLE_USER')" />
+
+		<form-login login-page="/index.jsp" 
+			authentication-failure-url="/index.jsp?error=403" 
+			default-target-url="/protected/hello.jsp"
+			username-parameter="username"
+			password-parameter="password" />
+	</http>
+
+	<authentication-manager>
+		<authentication-provider>
+			<user-service>
+				<user name="admin" password="123456" authorities="ROLE_USER" />
+			</user-service>
+		</authentication-provider>
+	</authentication-manager>
+
+</bean:beans>

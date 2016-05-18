@@ -1,0 +1,53 @@
+/* 
+ *  CSS padrão do Helpeo Control v1.0 - PRO Content Manager.
+ *  Created on : 02/04/2016, 19:09:21
+ *  Author     : Anderson O. Aristides
+*/
+
+/***********************************
+############## LOGIN ###############
+***********************************/
+.login{
+    background: #f2f2f2;
+}
+
+.login .trigger_ajax{
+    display: block;
+}
+
+.login_box{
+    text-align: center;
+    margin: 8% auto;
+}
+
+.login_logo{
+    width: 120px;
+    max-width: 80%;
+}
+
+.login_form{
+    text-align: left;
+    display: block;
+    width: 400px;
+    max-width: 90%;
+    margin: 25px auto;
+    background: #fff;
+    padding: 25px;
+    box-shadow: 0 0 5px 0 #666;
+}
+
+.login_link{
+    font-size: 0.8em;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.login_link a{
+    color: #333;
+    text-decoration: none;
+}
+
+.login_link a:hover{
+    text-decoration: underline;
+}
